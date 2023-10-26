@@ -39,6 +39,8 @@ img {
     justify-content: center;
 }
 
+/* UTILITY CLASSES */
+
 .d-flex {
     display:flex;
 }
@@ -74,6 +76,10 @@ img {
     padding: 20px;
 }
 
+.padding-10 {
+    padding: 10px;
+}
+
 .gap-20 {
     gap: 20px;
 }
@@ -85,6 +91,8 @@ img {
 .menu {
     cursor: pointer;
 }
+
+/* END OF UTILITY CLASSES */
 
 .top-container {
     height: 180px;
@@ -160,7 +168,21 @@ img {
     border: 0.2px solid lightgray;
 }
 
+.single-user-chat {
+    border-top: 2px solid lightgray;
+    cursor: pointer;
+}
 
+.last-msg {
+    color: lightgray;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.chat-time {
+    text-align: right;
+    color: gray;
+}
 
 .chat {
     flex-basis: 60%;
@@ -215,6 +237,12 @@ img {
     align-items: center;
     font-size: 24px;
     cursor: pointer;
+}
+
+/* HOVER EFFECTS */
+
+.single-user-chat:hover {
+    background-color: grey;
 }
 
 
