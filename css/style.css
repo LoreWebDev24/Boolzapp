@@ -1,3 +1,6 @@
+
+/* NOTA DI SERVIZIO: PER QUANTO DALLO STILE POSSA SEMBRARE NON STO UTILIZZANDO BOOTSTRAP IL CSS E' TUTTO CUSTOM  */
+
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +19,12 @@ li,ul,select,a,menu {
     text-decoration: none;
 }
 
+img {
+    display: block;
+    width: 10%;
+    border-radius: 50%;
+}
+
 .contaiener-fluid-flexable {
     margin: 0 auto;
     width: 100%;
@@ -24,16 +33,43 @@ li,ul,select,a,menu {
     justify-content: center;
 }
 
-.row {
+.d-flex {
     display:flex;
 }
 
 .col-2 {
     flex-basis: calc((100% /12)* 2);
+    height: 100%;
 }
 
 .col-8 {
     flex-basis: calc((100% /12)* 8);
+    height: 100%;
+}
+
+.col-10 {
+    flex-basis: calc((100% /12)* 10);
+    height: 100%;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.padding-left {
+    padding-left: 20px;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+.menu {
+    cursor: pointer;
 }
 
 .top-container {
@@ -72,7 +108,7 @@ li,ul,select,a,menu {
 .my-profile-user {
     
     background-color: #EBE9EB;
-    height: 60px;
+    height: 70px;
     border-right: 2px solid grey ;
 }
 
@@ -91,9 +127,18 @@ li,ul,select,a,menu {
 }
 
 .top-chat {
-    
     background-color: #EBE9EB;
-    height: 60px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.current-user-infos {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .central-chat {
