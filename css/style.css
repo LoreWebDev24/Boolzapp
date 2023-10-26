@@ -12,6 +12,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    overflow-y: hidden;
 }
 
 li,ul,select,a,menu {
@@ -19,9 +20,14 @@ li,ul,select,a,menu {
     text-decoration: none;
 }
 
+button {
+    border: none;
+    box-shadow: none;
+}
+
 img {
     display: block;
-    width: 10%;
+    width: 60px;
     border-radius: 50%;
 }
 
@@ -64,8 +70,16 @@ img {
     padding-left: 20px;
 }
 
+.padding-20 {
+    padding: 20px;
+}
+
 .gap-20 {
     gap: 20px;
+}
+
+.direction-column {
+    flex-direction: column;
 }
 
 .menu {
@@ -115,6 +129,35 @@ img {
 .advice-for-users {
     height: 80px;
     background-color: #8EDAFD ;
+}
+
+.bell-alert {
+    background-color: white;
+    color: #8EDAFD ;
+    padding: 14px;
+    border-radius: 50%;
+    font-size: 24px;
+}
+
+.user-search-bar { 
+    height: 50px;
+    background-color: #FBFAFB;
+}
+
+.search-btn {
+    width: 10%;
+    height: 30px;
+    border-radius: 1px;
+    border: 0.1px solid lightgrey;
+}
+
+.search-user-input {
+    width: 90%;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 1px;
+    border: none;
+    border: 0.2px solid lightgray;
 }
 
 
