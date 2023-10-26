@@ -60,12 +60,21 @@ img {
     height: 100%;
 }
 
+.col-12 {
+    flex-basis: calc((100% /12)* 12);
+    height: 100%;
+}
+
 .align-items-center {
     align-items: center;
 }
 
 .justify-center {
     justify-content: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
 }
 
 .padding-left {
@@ -209,6 +218,28 @@ img {
 .central-chat {
     height: calc(100% - 120px);
     background-image: url('../img/mine.jpg');
+    padding: 80px;
+}
+
+.li-my-message {
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 5px;
+    background-color: #D7F9BC;
+    border: 20px;
+    text-align: right;
+    border-radius: 20px;
+}
+
+.message__p {
+ 
+}
+
+
+.sent-time {
+   text-align: right;
+   font-size: 12px;
+   color: gray;
 }
 
 .bottom-chat {
