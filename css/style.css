@@ -257,6 +257,11 @@ img {
     border-radius: 20px;
 }
 
+.message__p {
+    max-width: 350px;
+    word-wrap:break-word
+}
+
 .sent-time {
    text-align: right;
    font-size: 12px;
