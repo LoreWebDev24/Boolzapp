@@ -225,6 +225,11 @@ img {
     justify-content: center;
     align-items: center;
 }
+/* PER UPGRADE FUTURI */
+
+/* .users-list {
+    overflow-y: scroll;
+} */
 
 .current-user-infos {
     padding-left: 20px;
