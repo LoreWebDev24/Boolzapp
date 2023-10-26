@@ -139,11 +139,11 @@ img {
     height: 800px;
     background-color: lightgray;
     width: 1200px;
-    position: absolute;
     z-index: 99999999999999;
-    top: 10%;
-    left: 20%;
-    transform: translate();
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
 }
 
