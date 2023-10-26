@@ -98,6 +98,7 @@ li,ul,select,a,menu {
 
 .central-chat {
     height: calc(100% - 120px);
+    background-image: url('../img/mine.jpg');
 }
 
 .bottom-chat {
