@@ -6,6 +6,7 @@ createApp({
 
             currentIndex: 0,
             messagesIndex:0,
+            newMsg:'',
             myUserName: 'Sidon',
             contacts: [
                 {
@@ -175,20 +176,43 @@ createApp({
     },
     methods: {
 
+// FIXO APPENA POSSIBILE LA SET TIMEOUT
 
+        autoMsg() {
+            const autoMsgObj = {
+                date: '10/01/2020 15:50:00',
+                message: 'OK Socio !',
+                status: 'sent'
+            };
+            this.currentContact.messages.push(autoMsgObj);
+        },
+        sendMsg(){
+            let newMsgTrimmed = this.newMsg.trim();
+
+            if (newMsgTrimmed != '') {
+                const newMsgObj = {
+                    date: '10/01/2020 15:50:00',
+                    message: newMsgTrimmed,
+                    status: 'sent'
+                };
+                    this.currentContact.messages.push(newMsgObj);
+                    this.newMsg = '';
+            }
+
+            const autoAns = setTimeout(autoMsg, 1000);
+            clearTimeout(autoAns);
+              
+        },
+    },
+    computed: {
+        currentContact: function() {
+            return this.contacts[this.currentIndex];
+        }
     },
     mounted() {
         console.log('Vue Kappa');
     }
 }).mount('#app');
-
-
-
-
-
-
-
-
 
 
 

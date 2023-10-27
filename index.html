@@ -130,7 +130,7 @@
                     <div class="col-10 padding-left align-items-center d-flex">
                         <img class="menu" src="./img/avatar_2.jpg" alt="">
                         <div class="current-user-infos">
-                            <h4 class="menu">{{contacts[currentIndex].name}}</h4>
+                            <h4 class="menu">{{currentContact.name}}</h4>
                             <p class="user-description">"Calcolando come si calcola"</p>
                         </div>
                     </div>
@@ -164,7 +164,7 @@
                             <span><i class="fa-regular fa-face-smile"></i></span>
                         </div>
                         <div class="col-8 send-message">
-                            <input class="message-bar" type="text" placeholder="Send a Message">
+                            <input v-model="newMsg" @keyup.enter="sendMsg()" class="message-bar" type="text" placeholder="Send a Message">
                         </div>
                         <div class="col-2 record-message">
                             <span><i class="fa-solid fa-microphone"></i></span>
