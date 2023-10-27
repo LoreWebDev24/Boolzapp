@@ -260,8 +260,11 @@ img {
     padding: 15px 15px 5px 15px;
     background-color: #D7F9BC;
     border: 20px;
-    text-align: right;
     border-radius: 20px;
+}
+
+.sent-time {
+    text-align: right;
 }
 /* ANCHE SE UN PO' RIDONDANTE PREFERISCO TENERLI SEPARATI */
 .received {
@@ -269,7 +272,6 @@ img {
     padding: 15px 15px 5px 15px;
     background-color: white;
     border: 20px;
-    text-align: right;
     border-radius: 20px;
     align-self: flex-start;
 }
