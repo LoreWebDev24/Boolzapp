@@ -147,6 +147,7 @@ img {
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
+    border: 0.5px solid gray;
 }
 
 .users {
@@ -163,6 +164,7 @@ img {
     background-color: #EBE9EB;
     height: 70px;
     border-right: 2px solid grey ;
+    border-bottom: 0.5px solid gray; 
 }
 
 .advice-for-users {
@@ -182,6 +184,7 @@ img {
 .user-search-bar { 
     height: 50px;
     background-color: #FBFAFB;
+    border-top: 2px solid lightgray;
 }
 
 .search-btn {
