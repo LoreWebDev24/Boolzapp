@@ -153,6 +153,7 @@ img {
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
+    user-select: none;
 }
 
 .my-profile-user {
@@ -227,6 +228,7 @@ img {
     justify-content: center;
     align-items: center;
     border-left: 2px solid gray;
+    user-select: none;
 }
 /* PER UPGRADE FUTURI */
 
