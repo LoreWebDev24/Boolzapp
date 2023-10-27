@@ -255,7 +255,7 @@ img {
     overflow-y: scroll;
 }
 
-.li-my-message {
+.sent {
     width: fit-content;
     padding: 15px 15px 5px 15px;
     background-color: #D7F9BC;
@@ -264,13 +264,14 @@ img {
     border-radius: 20px;
 }
 /* ANCHE SE UN PO' RIDONDANTE PREFERISCO TENERLI SEPARATI */
-.li-auto-message {
+.received {
     width: fit-content;
     padding: 15px 15px 5px 15px;
     background-color: white;
     border: 20px;
     text-align: right;
     border-radius: 20px;
+    align-self: flex-start;
 }
 
 .message__p {
