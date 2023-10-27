@@ -152,10 +152,11 @@ img {
     background-color: #FFFEFF;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
 }
 
 .my-profile-user {
-    
+    padding: 5px;
     background-color: #EBE9EB;
     height: 70px;
     border-right: 2px solid grey ;
@@ -164,6 +165,7 @@ img {
 .advice-for-users {
     height: 80px;
     background-color: #8EDAFD ;
+    padding: 10px;
 }
 
 .bell-alert {
@@ -224,6 +226,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-left: 2px solid gray;
 }
 /* PER UPGRADE FUTURI */
 
