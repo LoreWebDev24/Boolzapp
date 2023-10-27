@@ -4,6 +4,8 @@ createApp({
     data() {
         return {
 
+            currentIndex: 0,
+            myUserName: 'Sidon',
             contacts: [
                 {
                 name: 'Michele',

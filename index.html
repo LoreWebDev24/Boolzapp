@@ -48,17 +48,19 @@
                 </div>
                 <div class="users-list">
                     <ul class="d-flex direction-column ">
-                        <li class="padding-10 d-flex gap-20 single-user-chat">
-                            <img src="./img/avatar_1.jpg" alt="">
+                        <li v-for="(contact,i) in contacts" :key="i" class="padding-10 d-flex gap-20 single-user-chat" :class="{
+                            'active': i === currentIndex
+                        }">
+                            <img :src="contact.avatar" alt="">
                             <div class="user-chat-wrapper d-flex direction-column justify-center gap-20 col-8">
-                                <h4>Michele</h4>
+                                <h4>{{contact.name}}</h4>
                                 <span class="last-msg">Your last message with this user</span>
                             </div>
                             <div class="chat-time col-2">
                                 <span class="last-msg-time">12:00</span>
                             </div>
                         </li>
-                        <li class="padding-10 d-flex gap-20 single-user-chat">
+                        <!-- <li class="padding-10 d-flex gap-20 single-user-chat">
                             <img src="./img/avatar_2.jpg" alt="">
                             <div class="user-chat-wrapper d-flex direction-column justify-center gap-20 col-8">
                                 <h4>Fabio</h4>
@@ -117,7 +119,7 @@
                             <div class="chat-time col-2">
                                 <span class="last-msg-time">12:00</span>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>          
             </div>
@@ -127,7 +129,7 @@
                     <div class="col-10 padding-left align-items-center d-flex">
                         <img class="menu" src="./img/avatar_2.jpg" alt="">
                         <div class="current-user-infos">
-                            <h4 class="menu">Davide</h4>
+                            <h4 class="menu">{{contacts[currentIndex].name}}</h4>
                             <p class="user-description">"Calcolando come si calcola"</p>
                         </div>
                     </div>
