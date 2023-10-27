@@ -15,9 +15,11 @@ html {
 
 #app {
     height: 100vh;
+    min-width: 800px;
     position: relative;
     display: flex;
     flex-direction: column;
+    overflow-x: scroll;
     overflow-y: hidden;
 }
 
@@ -311,6 +313,22 @@ img {
 .single-user-chat:hover {
     background-color: grey;
 }
+
+/* 
+MEDIA QUERY DESKTOP FIRST SOLO PER DEI PICCOLI ADJUST SU PICCOLE RESIZE TANTO LA VW MINIMA E' 800 PX ESSENDO UNA WEB APP : */
+
+
+@media (max-width: 1199px) {   
+    .boolzapp {     
+      width: 100%;
+    }  
+  }
+
+  @media (max-width: 959px) {   
+    .advice-for-users {     
+      font-size: 12px;
+    }  
+  }
 
 
 
