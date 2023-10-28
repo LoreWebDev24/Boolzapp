@@ -314,9 +314,9 @@ img {
     cursor: pointer;
 }
 
-/* HOVER EFFECTS */
+/* ACTIVE USER EFFECTS */
 
-.single-user-chat:hover {
+.active {
     background-color: grey;
 }
 
