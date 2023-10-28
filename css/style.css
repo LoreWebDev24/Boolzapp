@@ -251,7 +251,7 @@ img {
 .central-chat {
     height: calc(100% - 120px);
     background-image: url('../img/mine.jpg');
-    padding: 80px;
+    padding: 4vh;
     overflow-y: scroll;
 }
 

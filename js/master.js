@@ -176,15 +176,13 @@ createApp({
     },
     methods: {
 
-// FIXO APPENA POSSIBILE LA SET TIMEOUT
-
-        autoMsg() {
+        autoMsg () {
             const autoMsgObj = {
                 date: '10/01/2020 15:50:00',
-                message: 'OK Socio !',
-                status: 'sent'
+                message: 'Ti rispondo dopo che sono a lezione...',
+                status: 'received'
             };
-            this.currentContact.messages.push(autoMsgObj);
+            this.pushInMsgs.push(autoMsgObj);
         },
         sendMsg(){
             let newMsgTrimmed = this.newMsg.trim();
@@ -195,18 +193,19 @@ createApp({
                     message: newMsgTrimmed,
                     status: 'sent'
                 };
-                    this.currentContact.messages.push(newMsgObj);
+                    this.pushInMsgs.push(newMsgObj);
                     this.newMsg = '';
             }
-
-            const autoAns = setTimeout(autoMsg, 1000);
-            clearTimeout(autoAns);
-              
+            
+            setTimeout(this.autoMsg, 1000);
         },
     },
     computed: {
         currentContact: function() {
             return this.contacts[this.currentIndex];
+        },
+        pushInMsgs: function() {
+            return this.contacts[this.currentIndex].messages;
         }
     },
     mounted() {
