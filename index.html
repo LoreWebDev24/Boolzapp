@@ -24,6 +24,7 @@
 
 <!-- NON UTILIZZO DELLE ANCORE SOLO PERCHE' E' UNA WEB APP SINGOLA PAGINA E LA CONSEGNA DELL' ESERCIZIO ERA VAGA SU QUESTO INOLTRE NON DEVE RENDERIZZARE ALTROVE ALTRIMENTI AVREI MESSO IMG NOMI ETC IN DELLE ANCORE, PER QUESTO UTILIZZO CREDO SIA SUFFICIENTE VUE-JS CON LE SUE FUNZIONIALITA' ON CLICK, DOPO AVER CHIESTO DEI CHIARIMENTI POTREI INSERIRLE QUANDO IL DOM DIVENTERA' DINAMICO -->
 
+<!-- USERS PART OF THE APP -->
         <div class="boolzapp">
             <div class="users">
                 <div class="my-profile-user d-flex">
@@ -44,11 +45,13 @@
                 </div>
                 <div class="user-search-bar d-flex justify-center align-items-center padding-20">
                     <button class="search-btn menu"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    <input class="search-user-input" type="text" placeholder="Cerca un Contatto o Nuova Chat">                       
+                    <input class="search-user-input" type="text" placeholder="Cerca un Contatto o Nuova Chat"
+                    v-model="searchBarValue"
+                    @keyup="searchUser()">                       
                 </div>
                 <div class="users-list">
                     <ul class="d-flex direction-column ">
-                        <li v-for="(contact,i) in contacts" :key="i" class="padding-10 d-flex gap-20 single-user-chat" :class="{
+                        <li v-for="(contact,i) in searchContacts" :key="i" class="padding-10 d-flex gap-20 single-user-chat" :class="{
                             'active': i === currentIndex
                         }"
                         @click="currentIndex = i">
@@ -158,6 +161,7 @@
                         </li> -->
                     </ul>
                 </div>
+<!-- SEND A MESSAGE BOTTOM CHAT -->
                 <div class="bottom-chat">
                     <div class="contaiener-fluid-flexable">
                         <div class="col-2 emojys">

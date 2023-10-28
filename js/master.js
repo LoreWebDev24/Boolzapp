@@ -8,6 +8,9 @@ createApp({
             messagesIndex:0,
             newMsg:'',
             myUserName: 'Sidon',
+            searchContacts : [],
+            searchBarValue: '',
+
             contacts: [
                 {
                     name: 'Michele',
@@ -197,8 +200,13 @@ createApp({
                     this.newMsg = '';
             }
             
-            setTimeout(this.autoMsg, 1000);
+            setTimeout(this.autoMsg, 1500);
         },
+        searchUser(){
+            this.searchContacts = this.contacts.filter((contact) => {
+                return contact.name.includes(this.searchBarValue);
+            });
+        }
     },
     computed: {
         currentContact: function() {
@@ -210,6 +218,7 @@ createApp({
     },
     mounted() {
         console.log('Vue Kappa');
+        this.searchContacts = this.contacts.filter(() => true)
     }
 }).mount('#app');
 
