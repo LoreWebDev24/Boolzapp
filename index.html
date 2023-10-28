@@ -24,7 +24,7 @@
 
 <!-- NON UTILIZZO DELLE ANCORE SOLO PERCHE' E' UNA WEB APP SINGOLA PAGINA E LA CONSEGNA DELL' ESERCIZIO ERA VAGA SU QUESTO INOLTRE NON DEVE RENDERIZZARE ALTROVE ALTRIMENTI AVREI MESSO IMG NOMI ETC IN DELLE ANCORE, PER QUESTO UTILIZZO CREDO SIA SUFFICIENTE VUE-JS CON LE SUE FUNZIONIALITA' ON CLICK, DOPO AVER CHIESTO DEI CHIARIMENTI POTREI INSERIRLE QUANDO IL DOM DIVENTERA' DINAMICO -->
 
-<!-- USERS PART OF THE APP -->
+<!-- USERS-LIST // PART OF THE APP -->
         <div class="boolzapp">
             <div class="users">
                 <div class="my-profile-user d-flex">
@@ -143,6 +143,7 @@
                         <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
                     </div>
                 </div>
+<!-- CHAT CON IL SINGOLO UTENTE -->
                 <div class="central-chat">
                     <ul class="d-flex direction-column col-12 gap-10 align-items-end">
                         <li :class="messageObj.status" 
