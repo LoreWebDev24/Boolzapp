@@ -206,6 +206,12 @@ createApp({
             this.searchContacts = this.contacts.filter((contact) => {
                 return contact.name.toLowerCase().includes(this.searchBarValue.toLowerCase());
             });
+        },
+        // CONTACT IL SINGOLO OGGETTO DI CONTACTS 
+        getLastMessage (contact,maxChar) {    
+            let stringMessage =  contact.messages[contact.messages.length - 1 ].message
+
+            return (stringMessage.length > maxChar) ? stringMessage.slice(0, maxChar) + '...' : stringMessage
         }
     },
     computed: {
@@ -214,13 +220,14 @@ createApp({
         },
         pushInMsgs: function() {
             return this.contacts[this.currentIndex].messages;
-        }
+        },
     },
     mounted() {
         console.log('Vue Kappa');
-        this.searchContacts = this.contacts.filter(() => true)
+        this.searchContacts = this.contacts.filter(() => true);
     }
 }).mount('#app');
+
 
 
 
