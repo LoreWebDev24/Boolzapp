@@ -134,10 +134,10 @@
             <div class="chat">
                 <div class="top-chat">
                     <div class="col-10 padding-left align-items-center d-flex">
-                        <img class="menu" src="./img/avatar_2.jpg" alt="">
+                        <img class="menu" :src="contacts[currentIndex].avatar" alt="">
                         <div class="current-user-infos">
                             <h4 class="menu">{{currentContact.name}}</h4>
-                            <p class="user-description">"Calcolando come si calcola"</p>
+                            <p class="user-description">{{currentContact.description}}</p>
                         </div>
                     </div>
                     <div class="col-2 d-flex align-items-center gap-20 menu">
