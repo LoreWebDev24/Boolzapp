@@ -125,6 +125,10 @@ img {
     margin-top: 20px;
 }
 
+.margin-bottom {
+    margin-bottom: 40px;
+}
+
 /* END OF UTILITY CLASSES */
 
 .top-container {
@@ -256,7 +260,8 @@ img {
     height: calc(100% - 120px);
     background-image: url('../img/mine.jpg');
     padding: 4vh;
-    overflow-y: scroll;
+    overflow-y: auto;
+    position: relative;
 }
 
 .sent {
@@ -347,8 +352,10 @@ img {
 }
 
 .delete-mode {
+    position: absolute;
     font-weight: bold;
     font-size: 14px;
+    top: 2%;
 }
 
 /* 
@@ -358,6 +365,12 @@ MEDIA QUERY DESKTOP FIRST SOLO PER DEI PICCOLI ADJUST SU PICCOLE RESIZE TANTO LA
 @media (max-width: 1199px) {   
     .boolzapp {     
       width: 100%;
+    }  
+  }
+
+  @media (max-width: 1180px) {   
+    .single-user-chat {     
+      height: 100px;
     }  
   }
 

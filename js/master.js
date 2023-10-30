@@ -211,7 +211,7 @@ createApp({
         getLastMessage (contact,maxChar) {    
             let stringMessage = '' 
 
-            if (contact.messages.length - 1 <= 0) {
+            if (contact.messages.length - 1 < 0) {
                 stringMessage = 'Il tuo ultimo messaggio con questo utente'
             }
             else {
