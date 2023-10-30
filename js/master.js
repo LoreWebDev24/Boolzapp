@@ -224,8 +224,8 @@ createApp({
            return this.counterModal = 0
         },
         atClickCounterModal() {
+            this.counterModal = 0
             this.counterModal++
-            setTimeout(this.counterModalReset, 6000);
         },
         msgDelete(i) {
             this.pushInMsgs.splice(i,1)

@@ -121,6 +121,10 @@ img {
     cursor: pointer;
 }
 
+.margin-top {
+    margin-top: 20px;
+}
+
 /* END OF UTILITY CLASSES */
 
 .top-container {
@@ -340,6 +344,11 @@ img {
     position: absolute;
     right: 0;
     bottom: 0;
+}
+
+.delete-mode {
+    font-weight: bold;
+    font-size: 14px;
 }
 
 /* 

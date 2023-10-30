@@ -147,11 +147,12 @@
                     </div>
                 </div>
 <!-- CHAT CON IL SINGOLO UTENTE -->
-                <div class="central-chat">
-                    <ul class="d-flex direction-column col-12 gap-10 align-items-end">
+                <div class="central-chat" @click.stop="counterModalReset()">
+                    <span class="delete-mode">Click on a Message for Delete Mode - Click on The Background to Exit from Delete Mode</span>
+                    <ul class="d-flex direction-column col-12 gap-10 align-items-end margin-top">
                         <li :class="messageObj.status" 
                         class="li-my-message d-flex direction-column gap-20"
-                        @click="atClickCounterModal()"
+                        @click.stop="atClickCounterModal()"
                         v-for="(messageObj,i) in contacts[currentIndex].messages" :key="i">
                             <div v-if="counterModal > 0" @click.stop="msgDelete(i)" class="delete-moda"><span>Delete</span></div>
                             <p class="message__p">{{messageObj.message}}</p>
