@@ -263,7 +263,7 @@ img {
 .central-chat {
     height: calc(100% - 120px);
     background-image: url('../img/mine.jpg');
-    padding: 4vh;
+    padding: 6vh;
     overflow-y: auto;
     position: relative;
 }
@@ -366,6 +366,8 @@ img {
 MEDIA QUERY DESKTOP FIRST SOLO PER DEI PICCOLI ADJUST SU PICCOLE RESIZE TANTO LA VW MINIMA E' 800 PX ESSENDO UNA WEB APP : */
 
 
+/* SONO SOLO PICCOLE CORREZIONI E' MOLTO MEGLIO UTILIZZARLA IN FULL SCREEN */
+
 @media (max-width: 1199px) {   
     .boolzapp {     
       width: 100%;
@@ -374,7 +376,7 @@ MEDIA QUERY DESKTOP FIRST SOLO PER DEI PICCOLI ADJUST SU PICCOLE RESIZE TANTO LA
 
   @media (max-width: 1180px) {   
     .single-user-chat {     
-      height: 100px;
+      height: 130px;
     }  
   }
 
