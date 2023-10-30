@@ -3,7 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-
+            counterModal: 0,
             currentIndex: 0,
             messagesIndex:0,
             newMsg:'',
@@ -211,7 +211,21 @@ createApp({
         getLastMessage (contact,maxChar) {    
             let stringMessage =  contact.messages[contact.messages.length - 1 ].message
 
+            // if (contact.messages.length - 1 <= 0) {
+            //     stringMessage = 'Il tuo ultimo messaggio con questo utente'
+            // }
+
             return (stringMessage.length > maxChar) ? stringMessage.slice(0, maxChar) + '...' : stringMessage
+        },
+        counterModalReset(){
+           return this.counterModal = 0
+        },
+        atClickCounterModal() {
+            this.counterModal++
+            setTimeout(this.counterModalReset, 6000);
+        },
+        msgDelete(i) {
+            this.pushInMsgs.splice(i,1)
         }
     },
     computed: {

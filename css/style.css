@@ -281,6 +281,10 @@ img {
     word-wrap:break-word
 }
 
+.li-my-message {
+    position: relative;
+}
+
 .sent-time {
    font-size: 12px;
    color: gray;
@@ -318,6 +322,24 @@ img {
 
 .active {
     background-color: grey;
+}
+
+.delete-moda {
+    width: 60%;
+    height: 20px;
+    background-color: #d8d8d8;
+    border-radius: 20px;
+    font-size: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 /* 
