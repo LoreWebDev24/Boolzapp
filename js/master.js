@@ -209,11 +209,14 @@ createApp({
         },
         // CONTACT IL SINGOLO OGGETTO DI CONTACTS 
         getLastMessage (contact,maxChar) {    
-            let stringMessage =  contact.messages[contact.messages.length - 1 ].message
+            let stringMessage = '' 
 
-            // if (contact.messages.length - 1 <= 0) {
-            //     stringMessage = 'Il tuo ultimo messaggio con questo utente'
-            // }
+            if (contact.messages.length - 1 <= 0) {
+                stringMessage = 'Il tuo ultimo messaggio con questo utente'
+            }
+            else {
+                stringMessage = contact.messages[contact.messages.length - 1 ].message
+            }
 
             return (stringMessage.length > maxChar) ? stringMessage.slice(0, maxChar) + '...' : stringMessage
         },
