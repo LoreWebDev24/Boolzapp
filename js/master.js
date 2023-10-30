@@ -238,6 +238,17 @@ createApp({
         },
         msgDelete(i) {
             this.pushInMsgs.splice(i,1)
+        },
+        getLastDate(contact){
+            let lastDate = '' 
+            if (contact.messages.length - 1 < 0) {
+                lastDate = ''
+            }
+            else {
+                lastDate = contact.messages[contact.messages.length - 1 ].date
+            }
+
+            return lastDate
         }
     },
     computed: {
