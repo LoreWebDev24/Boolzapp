@@ -222,6 +222,10 @@ img {
     font-size: 14px;
 }
 
+.last-msg-time {
+    color: #019689;
+}
+
 .chat-time {
     text-align: right;
     color: gray;

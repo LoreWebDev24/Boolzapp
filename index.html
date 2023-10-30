@@ -64,7 +64,7 @@
                             <span class="last-msg">{{getLastMessage(contact,36)}}</span>
                             </div>
                             <div class="chat-time col-2">
-                                <span class="last-msg-time">12:00</span>
+                                <span class="last-msg-time">{{contact.messages[contact.messages.length - 1 ].date}}</span>
                             </div>
                         </li>
                         <!-- <li class="padding-10 d-flex gap-20 single-user-chat">
@@ -156,7 +156,7 @@
                         v-for="(messageObj,i) in contacts[currentIndex].messages" :key="i">
                             <div v-if="counterModal > 0" @click.stop="msgDelete(i)" class="delete-moda"><span>Delete</span></div>
                             <p class="message__p">{{messageObj.message}}</p>
-                            <span class="sent-time">15:30</span>
+                            <span class="sent-time">{{messageObj.date}}</span>
                         </li>
                         <!-- <li class="li-my-message d-flex direction-column gap-10">
                             <p class="message__p">Hai flexato ?</p>

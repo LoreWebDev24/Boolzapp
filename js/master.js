@@ -1,4 +1,5 @@
 const { createApp } = Vue;
+const DateTime = luxon.DateTime;
 
 createApp({
     data() {
@@ -189,7 +190,7 @@ createApp({
 
         autoMsg () {
             const autoMsgObj = {
-                date: '10/01/2020 15:50:00',
+                date: DateTime.now().toFormat('dd/mm/yyyy HH:MM:ss'),
                 message: 'Ti rispondo dopo che sono a lezione...',
                 status: 'received'
             };
@@ -200,7 +201,7 @@ createApp({
 
             if (newMsgTrimmed != '') {
                 const newMsgObj = {
-                    date: '10/01/2020 15:50:00',
+                    date: DateTime.now().toFormat('dd/mm/yyyy HH:MM:ss'),
                     message: newMsgTrimmed,
                     status: 'sent'
                 };
@@ -252,6 +253,10 @@ createApp({
         this.searchContacts = this.contacts.filter(() => true);
     }
 }).mount('#app');
+
+
+
+
 
 
 
