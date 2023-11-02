@@ -253,15 +253,17 @@ createApp({
     },
     computed: {
         currentContact: function() {
-            return this.contacts[this.currentIndex];
+            return this.searchContacts[this.currentIndex];
         },
         pushInMsgs: function() {
-            return this.contacts[this.currentIndex].messages;
+            return this.searchContacts[this.currentIndex].messages;
         },
+    },
+    created() {
+        this.searchContacts = this.contacts.filter(() => true);
     },
     mounted() {
         console.log('Vue Kappa');
-        this.searchContacts = this.contacts.filter(() => true);
     }
 }).mount('#app');
 

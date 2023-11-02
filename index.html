@@ -67,66 +67,6 @@
                                 <span class="last-msg-time">{{getLastDate(contact)}}</span>
                             </div>
                         </li>
-                        <!-- <li class="padding-10 d-flex gap-20 single-user-chat">
-                            <img src="./img/avatar_2.jpg" alt="">
-                            <div class="user-chat-wrapper d-flex direction-column justify-center gap-20 col-8">
-                                <h4>Fabio</h4>
-                                <span class="last-msg">Your last message with this user</span>
-                            </div>
-                            <div class="chat-time col-2">
-                                <span class="last-msg-time">12:00</span>
-                            </div>
-                        </li>
-                        <li class="padding-10 d-flex gap-20 single-user-chat">
-                            <img src="./img/avatar_3.jpg" alt="">
-                            <div class="user-chat-wrapper d-flex direction-column justify-center gap-20 col-8">
-                                <h4>Samuele</h4>
-                                <span class="last-msg">Your last message with this user</span>
-                            </div>
-                            <div class="chat-time col-2">
-                                <span class="last-msg-time">12:00</span>
-                            </div>
-                        </li>
-                        <li class="padding-10 d-flex gap-20 single-user-chat">
-                            <img src="./img/avatar_4.jpg" alt="">
-                            <div class="user-chat-wrapper d-flex direction-column justify-center gap-20 col-8">
-                                <h4>Alessandro B.</h4>
-                                <span class="last-msg">Your last message with this user</span>
-                            </div>
-                            <div class="chat-time col-2">
-                                <span class="last-msg-time">12:00</span>
-                            </div>
-                        </li>
-                        <li class="padding-10 d-flex gap-20 single-user-chat">
-                            <img src="./img/avatar_5.jpg" alt="">
-                            <div class="user-chat-wrapper d-flex direction-column justify-center gap-20 col-8">
-                                <h4>Alessandro L.</h4>
-                                <span class="last-msg">Your last message with this user</span>
-                            </div>
-                            <div class="chat-time col-2">
-                                <span class="last-msg-time">12:00</span>
-                            </div>
-                        </li>
-                        <li class="padding-10 d-flex gap-20 single-user-chat">
-                            <img src="./img/avatar_6.jpg" alt="">
-                            <div class="user-chat-wrapper d-flex direction-column justify-center gap-20 col-8">
-                                <h4>Claudia</h4>
-                                <span class="last-msg">Your last message with this user</span>
-                            </div>
-                            <div class="chat-time col-2">
-                                <span class="last-msg-time">12:00</span>
-                            </div>
-                        </li>
-                        <li class="padding-10 d-flex gap-20 single-user-chat">
-                            <img src="./img/avatar_7.jpg" alt="">
-                            <div class="user-chat-wrapper d-flex direction-column justify-center gap-20 col-8">
-                                <h4>Federico</h4>
-                                <span class="last-msg">Your last message with this user</span>
-                            </div>
-                            <div class="chat-time col-2">
-                                <span class="last-msg-time">12:00</span>
-                            </div>
-                        </li> -->
                     </ul>
                 </div>          
             </div>
@@ -134,10 +74,10 @@
             <div class="chat">
                 <div class="top-chat">
                     <div class="col-10 padding-left align-items-center d-flex">
-                        <img class="menu" :src="contacts[currentIndex].avatar" alt="">
+                        <img class="menu" :src="searchContacts[currentIndex].avatar" alt="">
                         <div class="current-user-infos">
-                            <h4 class="menu">{{currentContact.name}}</h4>
-                            <p class="user-description">{{currentContact.description}}</p>
+                            <h4 class="menu">{{searchContacts[currentIndex].name}}</h4>
+                            <p class="user-description">{{searchContacts[currentIndex].description}}</p>
                         </div>
                     </div>
                     <div class="col-2 d-flex align-items-center gap-20 menu">
@@ -153,20 +93,11 @@
                         <li :class="messageObj.status" 
                         class="li-my-message d-flex direction-column gap-20"
                         @click.stop="atClickCounterModal()"
-                        v-for="(messageObj,i) in contacts[currentIndex].messages" :key="i">
+                        v-for="(messageObj,i) in searchContacts[currentIndex].messages" :key="i">
                             <div v-if="counterModal > 0" @click.stop="msgDelete(i)" class="delete-moda"><span>Delete</span></div>
                             <p class="message__p">{{messageObj.message}}</p>
                             <span class="sent-time">{{messageObj.date}}</span>
                         </li>
-                        <!-- <li class="li-my-message d-flex direction-column gap-10">
-                            <p class="message__p">Hai flexato ?</p>
-                            <span class="sent-time">15:30</span>
-                        </li> -->
-                        <!-- AUTO MESSAGE: -->
-                        <!-- <li class="li-auto-message d-flex direction-column gap-10 align-self-start">
-                            <p class="message__p">Tutto bene per fortuna</p>
-                            <span class="sent-time">15:30</span>
-                        </li> -->
                     </ul>
                 </div>
 <!-- SEND A MESSAGE BOTTOM CHAT -->
