@@ -188,15 +188,7 @@ createApp({
     },
     methods: {
 
-        autoMsg () {
-            const autoMsgObj = {
-                date: DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
-                message: 'Ti rispondo dopo che sono a lezione...',
-                status: 'received'
-            };
-            this.pushInMsgs.push(autoMsgObj);
-        },
-        sendMsg(){
+        sendMsg () {
             let newMsgTrimmed = this.newMsg.trim();
 
             if (newMsgTrimmed != '') {
@@ -205,11 +197,20 @@ createApp({
                     message: newMsgTrimmed,
                     status: 'sent'
                 };
-                    this.pushInMsgs.push(newMsgObj);
-                    this.newMsg = '';
+                const currentChat = this.searchContacts[this.currentIndex].messages
+                currentChat.push(newMsgObj);
+                this.newMsg = '';
+
+                setTimeout (() =>{
+                    const autoMsgObj = {
+                        date: DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
+                        message: 'Ti rispondo dopo che sono a lezione...',
+                        status: 'received'
+                    };
+
+                    currentChat.push(autoMsgObj)
+                },2000)          
             }
-            
-            setTimeout(this.autoMsg, 1500);
         },
         searchUser(){
             this.searchContacts = this.contacts.filter((contact) => {

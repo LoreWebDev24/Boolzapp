@@ -46,7 +46,7 @@
                 <div class="user-search-bar d-flex justify-center align-items-center padding-20">
                     <button class="search-btn menu"><i class="fa-solid fa-magnifying-glass"></i></button>
                     <input class="search-user-input" type="text" placeholder="Cerca un Contatto o Nuova Chat"
-                    v-model="searchBarValue"
+                    v-model.trim="searchBarValue"
                     @keyup="searchUser()">                       
                 </div>
                 <div class="users-list">
