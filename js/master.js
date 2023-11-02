@@ -190,7 +190,7 @@ createApp({
 
         autoMsg () {
             const autoMsgObj = {
-                date: DateTime.now().toFormat('dd/mm/yyyy HH:MM:ss'),
+                date: DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
                 message: 'Ti rispondo dopo che sono a lezione...',
                 status: 'received'
             };
@@ -201,7 +201,7 @@ createApp({
 
             if (newMsgTrimmed != '') {
                 const newMsgObj = {
-                    date: DateTime.now().toFormat('dd/mm/yyyy HH:MM:ss'),
+                    date: DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
                     message: newMsgTrimmed,
                     status: 'sent'
                 };
